@@ -2,8 +2,8 @@ import { Client } from "pg";
 import dotenv from 'dotenv';
 dotenv.config();
 
-//  const connect = () => {
-
+// database connection done
+// all the values are stored in enviornment variables
 
    export const client = new Client({
         host: process.env.HOST,
