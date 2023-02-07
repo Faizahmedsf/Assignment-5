@@ -11,7 +11,10 @@ const readFiledata = () => {
     return new Promise<User[]>((resolve, reject) => {
 
         /* in  in this we have a primary key in users table and a foreign key in customer table and we are 
-        / calling a right join query */
+          calling a right join query and for created_on we have used a timestamp type and for default value i am  using current_timestamp and for 
+//        modified created a trigger which get executed before an update on every row 
+        */
+        
 
         client.query('select users.*, customer.customer_name , customer.customer_role  from customer RIGHT JOIN users on customer.user_id = users.user_id order by users.user_id ASC', (err: Error, result) => {
             if (err) {
