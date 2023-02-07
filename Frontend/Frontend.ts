@@ -33,7 +33,7 @@ enum userRole {
 
 const newp = fetch('http://localhost:8001/getdata', {
     method: 'GET'
-}).then((response) => response.json())
+}).then((response:Response) => response.json())
     .then(data => { return data })
 // }
 
